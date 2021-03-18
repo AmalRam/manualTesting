@@ -1,0 +1,234 @@
+Fundamental Concepts of Testing
+=======================================
+What is software testing?
+
+Ans: Software testing is a technique to find out bugs in software and determine the quality 
+level of it.
+
+
+What is SDLC?
+
+Ans: Software Development Life Cycle.
+
+	a)Requirement Analysis
+	b)Design
+	c)Implementation, coding, Development
+	d)Testing (STLC)
+	e)Deployment
+	f)Maintenance
+
+
+
+What is STLC?
+
+Ans: Software Testing Life cycle. It is a step-by-step process to complete the testing of any
+	particular Application/Software/Software slice Under Test (AUT/SUT)
+
+
+Stages of STLC
+===============
+1. Requirement Analysis
+--------------------------------
+In this phase the testing team would need to gather the information about AUT by interacting
+with various stakeholders of the project and document the exact need of the requirements of any testing.
+
+
+2. Test Planning
+-----------------------
+In this phase th etetsing team head or QE Engineer would determine the test plan strategy which will
+include:
+	a)The cost involved for this project
+	b)The manpower involved in this project
+	c)Assessment of the other resources involved in this project
+	d)The test environment needed to be setup for this project
+
+3. Test Case Development
+--------------------------------
+@Test @BeforeEach @BeforeAll @After.......
+assertEquals(), assertSame(), AssertTrue()....
+
+In this phase the actual coding of test cases are done. Also test cases are verified , scripted and reviewed during
+this phase.
+
+4. Environment of test execution
+----------------------------------------
+In this phase the software and hardware configuration are setup.
+
+
+5. Test Execution phase
+-----------------------------
+In this phase the test cases are manually executed. 
+
+
+6.Test Cycle closure
+--------------------------
+In this phase we mark the completion of all the test case execution and generate Test Report.
+
+*******************************************************************************************************
+
+Testing principles
+===========================
+
+1. Testing shows the presence of defects and not absence of defects.
+2. Exhaustive testing is impossible.
+3. Early testing is the best habit.
+4. Pesticide Paradox
+5. Testing is context dependent.
+6. Absence of error is fallacy.
+7. Defect clustering
+	Pareto Ratio -> 80 -20 rule
+80% of the error or bugs /defects of AUT will be found in 20% of the modules
+
+10 classes--> 8 classes for DAO pattern(20% bugs), 2 classes for Security(80% bugs)
+
+
+	When we are assessing the performance of any unit, we will see that 80% of the 
+	contrinution for the performance comes from the 20% of the elements of the unit.
+
+Volkswagen --> hatch back cars[low priced], Salon car, SUV, Limos [High priced]
+
+80% of their revenue is generated from 20% of their customers.
+80% of their customers buy small cars which generates 20% of their revenue.
+20% of their customers by Salon cars which generates 80% of their revenue.
+
+************************************************************************************
+
+Types of testing
+======================
+1. Unit testing
+2.Component testing
+3.Integration Testing
+4.Regression Testing
+5.System Testing
+6. User Acceptance testing
+7. Load testing
+
+8. Stress testing
+
+Testing Levels
+=====================
+
+Level 1 --> Unit/Component testing
+
+Level 2 --> Integration testing
+
+Level 3 --> System testing
+
+Level 4 --> Acceptance Testing
+
+
+
+Testing approaches and techniques
+---------------------------------------
+1. TDD
+------------
+Test Driven Development. In this case only the skeleton project is present. Actual code and functional
+implementation is not there during test case development. That means, the test cases must be written bases assumptions
+and mock values. So while writing test cases, we provide actual values as mock values. And expected values as standard
+values assuming the functional output.
+
+
+2. BDD
+-----------
+Behaviour Driven Development. In this case the actual project is present and AUT is completely live and running.
+However, based on the user requirements, the functional behaviour of the AUT must be verified. For that all test cases
+must be developed with the intention to verify the behaviour of the AUT.
+
+
+RTM
+===============
+Requirement Traceability Matrix. It is a document format that maps and traces user requirement with the test cases
+that have been developed. It captures all requirements proposed by the client and requirement traceability in a single
+document. And finally traces and maps the delivered project at the conclusion of the SDLC. So, we can say that the 
+purpose of this RTM document is to validate that all requirements are checked via test cases.
+
+Defect Management
+====================
+Defect is nothing but bugs.  So defect management means , logging defects, categorizing them, prioritizing them,
+verify them and resolving them.
+
+Defect Management format will have:
+-----------------------------------
+a)Defect Id,
+b)Defect Category
+c)Defect priority
+d)Verification
+e)Resolution
+
+===================================================================
+Various SDLC approaches
+============================
+a)Waterfall approach
+b)Spiral approach
+c)Incremental
+d)Prototype
+e)Lean
+f)Agile
+
+
+Agile Methodology
+=======================
+The Agile SDLC approach will separate the product into cycles and deliver a working slice (software slice) of the 
+product as soon as possible and then again go back to developing another working slice of the software.
+
+
+
+12 principles of Agile
+=======================
+1. Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+
+2. Welcome changing requirements, even late in the development. Agile processes harness change for the 
+customers' competitive advantage.
+
+3.Deliver working software slices frequently , from a couple of weeks to a couple to months, with a presefence
+to the shorter timescale.
+
+4. Business people and developers must work together and collaborate on a daily basis through Scrum(Sprint basis)
+ or StandUp (daily basis) meetings.	This process is done in DevOps methodology.
+
+5.Build projects around motivated individual.
+
+6. The most efficient and effective method of conveying information within a dev team is through StandUp meetings.
+
+7. Working softwrae slice is the primary measure of progress.
+
+8. Agile processes promote sustainable development. The sponsors, developers and users
+	should be able to maintain a constant pace.
+
+9. Continious attention to technical excellence.
+
+10. Simplicity-- the art of maximizing the amount of work not done-- is essential.
+
+11. The best architectures, requirements and designs emerge from self-organizing teams.
+
+12. At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour
+accordingly.
+--------------------------------------------------------
+
+Agile Story
+=============
+Agile stories are fictional scenarios created to perform testing. These stories will help us to understand
+the core purpose of a particular test scenario.
+
+
+Story 1
+===============
+As a USER , I want to LOGIN to the Flight booking website for searching flight options for Delhi to Mumbai
+to Chennai, and fares for my chosen dates and book it. //Good Fictional story because it is achievable.
+
+
+Story 2
+--------
+As a Developer , I want to STORE data in the database for the APPLICATION // Bad fictionional Story
+
+It is bad fiction because it creates a deadlock for the tester. If the tester is trying to test the APPLICATION,
+then the database is missing. Again, if the tester tries to test the database first, then APPLICATION is missing.
+
+
+JIRA 
+------------
+JIRA is an online tool used for effective Agile Story and Test Case management.
+
+Zephyr
+--------
+It is the test case and STLC management tool for Agile methodology.
